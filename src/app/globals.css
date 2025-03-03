@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.square {
+/* .square {
   width: 200px;
   height: 200px;
   background-color: purple;
@@ -11,8 +11,27 @@
   transition-duration: 2s;
   transition-delay: 1s;
   transition-timing-function: ease-in-out; */
-}
 
+/*
 .square:hover {
   transform: rotate(45deg);
+} */
+/* Define default theme (light mode) */
+:root {
+  --bg-color: white;
+  --text-color: black;
+}
+
+/* Global body styles */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Dark mode styles using prefers-color-scheme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: rgb(168, 34, 34);
+    --text-color: white;
+  }
 }
